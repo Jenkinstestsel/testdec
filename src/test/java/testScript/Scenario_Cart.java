@@ -26,7 +26,7 @@ public class Scenario_Cart  extends Base{
 		String tcid=cartdata.get("TCID").toString();
 		String orderid=cartdata.get("order").toString();
 		
-		startTest = extentReports.startTest(btype + "-" +tcid);
+		startTest = extentReports.startTest(btype + "-" +tcid + "poda");
 		
 		if(driver.getTitle().contains("rediff")){
 			startTest.log(LogStatus.PASS, "validate title","Passed  Validate title" + startTest.addScreenCapture(screenshot(tcid, orderid)));
